@@ -1,7 +1,6 @@
 # ant-colony
 A tool collect for myself.
 
-#
 
 [demo](https://tools.99diary.com)
 
@@ -9,9 +8,24 @@ A tool collect for myself.
 
 ### todo list
 
-- [] QR create
+- [x] create QR from url
 
-- [] 
+### install
+
+
+```shell
+npm install
+```
+
+start
+```
+npm start //test code
+```
+
+package code 
+```shell
+npm build //build
+```
 
 
 ### webpack config 
