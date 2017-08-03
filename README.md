@@ -24,9 +24,9 @@ npm start //test code
 
 package code 
 ```shell
-npm build //build
+npm run build //build
 ```
-
+see the release in `dist`
 
 ### webpack config 
 
