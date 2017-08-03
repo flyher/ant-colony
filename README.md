@@ -31,5 +31,7 @@ npm build //build
 ### webpack config 
 
 [vue2-webpack-es6](https://github.com/yaoyonstudio/vue2-webpack-es6)
+
 [vue-hackernews](https://github.com/vuejs/vue-hackernews)
+
 [vue2-demo](https://github.com/lzxb/vue2-demo)
