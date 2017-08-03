@@ -23,7 +23,7 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, '/dist'),
-    publicPath: '/dist/',
+    publicPath: process.env.NODE_ENV === 'release' ? '/dist/' : 'http://localhost:8889/dist/',
     filename: '[name].bundle.js' // '[name].js?[hash]'
   },
   module: {
@@ -118,14 +118,8 @@ module.exports = {
       //   exclude: /node_modules/,
       //   include: __dirname
       // },
-      // { test: /\node_modules\/bootstrap\/dist\/js\//, loader: 'imports-loader?jQuery=jquery' },
       { test: /\.(woff2?|svg)$/, loader: 'url-loader?limit=10000' },
       { test: /\.(ttf|eot)$/, loader: 'file-loader' }
-      // Boostrap 3
-      // { test: /bootstrap-sass\/assets\/javascripts\//, loader: 'imports-loader?jQuery=jquery' },
-
-      // Bootstrap 4
-      // { test: /bootstrap\/dist\/js\/umd\//, loader: 'imports-loader?jQuery=jquery' }
     ]
   },
   resolve: {
@@ -148,6 +142,11 @@ module.exports = {
       jQuery: 'jquery',
       'window.jQuery': 'jquery'
     }),
+    // new webpack.DefinePlugin({
+    //   'process.env': {
+    //     'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+    //   }
+    // }),
     new CleanWebpackPlugin(
       // 匹配删除的文件
       // ['dist/scripts', 'dist/css', 'dist/src', 'dist/*.js'],

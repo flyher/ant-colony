@@ -22,11 +22,28 @@ start
 npm start //test code
 ```
 
-package code 
-```shell
-npm run build //build
+dev:local8889
+
+debug code in `http://localhost:8889/dist/index.html` and we should change import js file from `localhost:8889` in `index.html`
 ```
-see the release in `dist`
+npm dev:local8889
+```
+
+
+dev
+
+we can import in `index.html` from `./dist/`
+```shell
+npm dev
+```
+
+dev:release
+
+the code will release in `./dist/`
+```
+npm dev:release
+```
+
 
 ### webpack config 
 
