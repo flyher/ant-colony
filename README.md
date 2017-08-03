@@ -1,8 +1,8 @@
 # ant-colony
-A tool collect for myself.
+A tool collect for myself, base on Vuejs, Webpack and bootstrap.
 
 
-[demo](https://tools.99diary.com)
+You can visit this website [here](https://tools.99diary.com)
 
 [Simplified Chinese](README-CN.md)
 
@@ -22,11 +22,11 @@ start
 npm start //test code
 ```
 
-dev:local8889
+package and open website in localhost:8889
 
 debug code in `http://localhost:8889/dist/index.html` and we should change import js file from `localhost:8889` in `index.html`
 ```
-npm dev:local8889
+npm run local
 ```
 
 
@@ -37,11 +37,11 @@ we can import in `index.html` from `./dist/`
 npm dev
 ```
 
-dev:release
+release
 
 the code will release in `./dist/`
 ```
-npm dev:release
+npm run release
 ```
 
 
