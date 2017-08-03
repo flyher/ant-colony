@@ -9,6 +9,8 @@
 </template>
 <script>
 // import Vue from 'vue'
+import 'jquery'
+import '../../node_modules/bootstrap/dist/js/bootstrap.js'
 import header from '../components/header'
 import footer from '../components/footer'
 export default {

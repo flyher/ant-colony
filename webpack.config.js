@@ -1,5 +1,5 @@
 const path = require('path')
-// const webpack = require('webpack')
+const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const extractSCSS = new ExtractTextPlugin({ filename: 'css/style.css', disable: false, allChunks: true })
 const CleanWebpackPlugin = require('clean-webpack-plugin')
@@ -7,8 +7,11 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: {
-    // common: [
-    //   './script/lib/jquery-1.8.3.js'
+    // 'scripts/common': [
+    //   // './script/lib/jquery-1.8.3.js'
+    //   './node_modules/bootstrap/dist/css/bootstrap-theme.min.css',
+    //   './node_modules/bootstrap/dist/css/bootstrap.min.css',
+    //   './node_modules/bootstrap/dist/js/bootstrap.min.js'
     // ],
     // './common/main': path.resolve(__dirname,'src/index.js'),
     // 'scripts/vendor': ['vue', 'vue-router', 'axios'],
@@ -79,42 +82,50 @@ module.exports = {
           loader: 'babel-loader' // ['babel-loader', 'eslint-loader']
         }
       },
-      {
-        test: /\.(gif|png|jpe?g|svg)$/i,
-        //     loader: 'file-loader',
-        //     options: {
-        //       name: '[name].[ext]?[hash]'
-        //     }
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 10000,
-              name: path.posix.join('assets', 'img/[name].[ext]')
-            }
-          },
-          {
-            loader: 'image-webpack-loader',
-            query: {
-              mozjpeg: {
-                progressive: true
-              },
-              gifsicle: {
-                interlaced: false
-              },
-              optipng: {
-                optimizationLevel: 7
-              },
-              pngquant: {
-                quality: '60-80',
-                speed: 4
-              }
-            }
-          }
-        ],
-        exclude: /node_modules/,
-        include: __dirname
-      }
+      // {
+      //   test: /\.(gif|png|jpe?g|svg)$/i,
+      //   //     loader: 'file-loader',
+      //   //     options: {
+      //   //       name: '[name].[ext]?[hash]'
+      //   //     }
+      //   use: [
+      //     {
+      //       loader: 'url-loader',
+      //       options: {
+      //         limit: 10000,
+      //         name: path.posix.join('assets', 'img/[name].[ext]')
+      //       }
+      //     },
+      //     {
+      //       loader: 'image-webpack-loader',
+      //       query: {
+      //         mozjpeg: {
+      //           progressive: true
+      //         },
+      //         gifsicle: {
+      //           interlaced: false
+      //         },
+      //         optipng: {
+      //           optimizationLevel: 7
+      //         },
+      //         pngquant: {
+      //           quality: '60-80',
+      //           speed: 4
+      //         }
+      //       }
+      //     }
+      //   ],
+      //   exclude: /node_modules/,
+      //   include: __dirname
+      // },
+      // { test: /\node_modules\/bootstrap\/dist\/js\//, loader: 'imports-loader?jQuery=jquery' },
+      { test: /\.(woff2?|svg)$/, loader: 'url-loader?limit=10000' },
+      { test: /\.(ttf|eot)$/, loader: 'file-loader' }
+      // Boostrap 3
+      // { test: /bootstrap-sass\/assets\/javascripts\//, loader: 'imports-loader?jQuery=jquery' },
+
+      // Bootstrap 4
+      // { test: /bootstrap\/dist\/js\/umd\//, loader: 'imports-loader?jQuery=jquery' }
     ]
   },
   resolve: {
@@ -128,10 +139,15 @@ module.exports = {
     extractSCSS,
     // 合并文件
     // new webpack.optimize.CommonsChunkPlugin({
-    //   name: ['vendor'],
-    //   filename: 'vendor.js',
+    //   name: ['common'],
+    //   filename: 'common.js',
     //   minChunks: Infinity
     // }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery'
+    }),
     new CleanWebpackPlugin(
       // 匹配删除的文件
       // ['dist/scripts', 'dist/css', 'dist/src', 'dist/*.js'],
