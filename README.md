@@ -1,5 +1,5 @@
 # ant-colony
-A tool collect for myself, base on Vuejs, Webpack and bootstrap.
+A collection of useful gadgets, base on Vuejs, Webpack and bootstrap.
 
 
 You can visit this website [here](https://tools.99diary.com)
