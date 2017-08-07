@@ -3,8 +3,7 @@
   <footer class="footer">
     <p>
       Theme by
-      <a href="http://getbootstrap.com">Bootstrap</a>&nbsp;&nbsp;
-      Powered by
+      <a href="http://getbootstrap.com">Bootstrap</a>&nbsp;&nbsp; Powered by
       <a href="https://github.com/flyher">flyher</a>
     </p>
     <p>

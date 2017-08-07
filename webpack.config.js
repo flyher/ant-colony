@@ -7,6 +7,10 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: {
+    'scripts/last': [
+      './src/lib/redirect.js',
+      './src/lib/ga.js'
+    ],
     // 'scripts/common': [
     //   './src/lib/jquery.qrcode.js',
     //   './src/lib/qrcode.js'
