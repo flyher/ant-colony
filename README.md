@@ -40,7 +40,7 @@ dev
 
 we can import in `index.html` from `./dist/`
 ```shell
-npm dev
+npm run dev
 ```
 
 release
