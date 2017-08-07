@@ -41,6 +41,7 @@ export default {
       console.log('load qr page')
     },
     createQRCode: function () {
+      $('#qrcode').html('');
       new QRCode(document.getElementById('qrcode'), {
         text: this.url,
         width: 128,

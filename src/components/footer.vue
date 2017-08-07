@@ -4,7 +4,7 @@
     <p>
       Theme by
       <a href="http://getbootstrap.com">Bootstrap</a>&nbsp;&nbsp;
-      Build by
+      Powered by
       <a href="https://github.com/flyher">flyher</a>
     </p>
     <p>
