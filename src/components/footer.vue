@@ -1,7 +1,16 @@
 <template>
-  <div class="footer">
-    footer {{msg}}
-  </div>
+  <!-- footer {{msg}} -->
+  <footer class="footer">
+    <p>
+      Theme by
+      <a href="http://getbootstrap.com">Bootstrap</a>&nbsp;&nbsp;
+      Build by
+      <a href="https://github.com/flyher">flyher</a>
+    </p>
+    <p>
+      <a href="#">Back to top</a>
+    </p>
+  </footer>
 </template>
 <script>
 export default {
@@ -24,8 +33,10 @@ export default {
 <style scoped lang="scss">
 @import '../scss/global.scss';
 .footer {
-  height: 60px;
-  width: 100%;
-  background-color: skyblue;
+  padding: 40px 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e5e5e5;
 }
 </style>
