@@ -7,18 +7,22 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: {
-    // 'scripts/common': [
-    //   // './script/lib/jquery-1.8.3.js'
-    //   './node_modules/bootstrap/dist/css/bootstrap-theme.min.css',
-    //   './node_modules/bootstrap/dist/css/bootstrap.min.css',
-    //   './node_modules/bootstrap/dist/js/bootstrap.min.js'
-    // ],
+    'scripts/common': [
+      './src/lib/jquery.qrcode.js'
+      // './script/lib/jquery-1.8.3.js'
+      // './node_modules/bootstrap/dist/css/bootstrap-theme.min.css',
+      // './node_modules/bootstrap/dist/css/bootstrap.min.css',
+      // './node_modules/bootstrap/dist/js/bootstrap.min.js'
+    ],
     // './common/main': path.resolve(__dirname,'src/index.js'),
     // 'scripts/vendor': ['vue', 'vue-router', 'axios'],
     // 'scripts/vendor':
     // 'scripts/index':
     'scripts/index': [
       path.resolve(__dirname, './src/entry/index.js')
+    ],
+    'scripts/qr': [
+      path.resolve(__dirname, './src/entry/qr.js')
     ]
   },
   output: {
