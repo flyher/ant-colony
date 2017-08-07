@@ -4,9 +4,9 @@
     <div class="content">
       <div class="col-lg-6">
         <div class="input-group">
-          <input type="text" placeholder="url" class="form-control">
+          <input type="text" placeholder="url" class="form-control" v-model="url">
           <span class="input-group-btn">
-            <button class="btn btn-success" type="button">
+            <button class="btn btn-success" type="button" v-on:click="createQRCode()">
               create
             </button>
           </span>
@@ -20,7 +20,7 @@
 <script>
 import header from '../components/header'
 import footer from '../components/footer'
-import QRCode from 'qrcode'
+import QRCode from 'qrcodejs2'
 export default {
   name: 'qr',
   components: {
@@ -29,7 +29,8 @@ export default {
   },
   data () {
     return {
-      msg: 'content'
+      url: '',
+      msg: 'qr page'
     }
   },
   mounted: function () {
@@ -37,10 +38,11 @@ export default {
   },
   methods: {
     init: function () {
-      console.log('load index')
-      console.log(QRCode)
-      new QRCode(document.getElementById('qrcode'), { // eslint-disable-line no-new
-        text: 'http://jindo.dev.naver.com/collie',
+      console.log('load qr page')
+    },
+    createQRCode: function () {
+      new QRCode(document.getElementById('qrcode'), {
+        text: this.url,
         width: 128,
         height: 128,
         colorDark: '#000000',
@@ -58,8 +60,10 @@ export default {
     width: 80%;
     height: 400px;
     margin: auto;
-    .qrstring {
-      width: 100%;
+    .qrcode {
+      img {
+        display: initial;
+      }
     }
   }
 }
