@@ -1,8 +1,8 @@
 <template>
-  <div id="app">
+  <div id="index">
     <ui-header></ui-header>
     <div class="content">
-      index {{msg}}
+      {{msg}}
     </div>
     <ui-footer></ui-footer>
   </div>
@@ -20,7 +20,7 @@ export default {
   },
   data () {
     return {
-      msg: 'content'
+      msg: 'Welcome to Ant-Colony'
     }
   },
   // mounted: function () {
@@ -34,7 +34,13 @@ export default {
 }
 </script>
 <style lang="scss">
-.content {
-  background-color: silver;
+#index {
+  .content {
+    // background-color: skyblue;
+    width: 80%;
+    height: 400px;
+    margin: auto;
+    text-align: center;
+  }
 }
 </style>

@@ -60,10 +60,10 @@ export default {
     width: 80%;
     height: 400px;
     margin: auto;
-    .qrcode {
-      img {
-        display: initial;
-      }
+    #qrcode {
+      width: 130px;
+      height: 130px;
+      margin: 10px auto auto auto;
     }
   }
 }

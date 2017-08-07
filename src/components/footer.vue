@@ -33,7 +33,7 @@ export default {
 <style scoped lang="scss">
 @import '../scss/global.scss';
 .footer {
-  padding: 40px 0;
+  padding: 10px 0;
   color: #999;
   text-align: center;
   background-color: #f9f9f9;
