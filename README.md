@@ -9,12 +9,13 @@ You can visit this website here:
 [Mirror 2](https://www.99diary.com/ant-colony/)
 
 
-
 [Simplified Chinese](README-CN.md)
 
 ### todo list
 
 - [x] create QR from url
+
+- [x] decode weibo url from the picture url  [here](https://www.v2ex.com/t/388152)
 
 ### install
 
@@ -58,3 +59,12 @@ npm run release
 [vue-hackernews](https://github.com/vuejs/vue-hackernews)
 
 [vue2-demo](https://github.com/lzxb/vue2-demo)
+
+
+### Tools
+
+Build By Visual Studio Code
+
+### License
+
+Code in ant-colony project is licensed under the GPL

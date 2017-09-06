@@ -28,6 +28,9 @@ module.exports = {
     ],
     'scripts/qr': [
       path.resolve(__dirname, './src/entry/qr.js')
+    ],
+    'scripts/wb': [
+      path.resolve(__dirname, './src/entry/wb.js')
     ]
   },
   output: {
