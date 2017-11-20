@@ -31,6 +31,9 @@ module.exports = {
     ],
     'scripts/wb': [
       path.resolve(__dirname, './src/entry/wb.js')
+    ],
+    'scripts/brige': [
+      path.resolve(__dirname, './src/entry/brige.js')
     ]
   },
   output: {

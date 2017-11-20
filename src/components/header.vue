@@ -48,6 +48,16 @@
                               <li><a href="#">One more separated link</a></li> -->
               </ul>
             </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Redirect
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="page-brige">
+                  <a href="brige.html">brige</a>
+                </li>
+              </ul>
+            </li>
           </ul>
         </div>
         <!--/.nav-collapse -->

@@ -17,6 +17,8 @@ You can visit this website here:
 
 - [x] decode weibo url from the picture url  [here](https://www.v2ex.com/t/388152)
 
+- [x] redirect to your website without referrer
+
 ### install
 
 
