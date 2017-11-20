@@ -40,6 +40,7 @@
     "vue-html": "html"
   },
   "vetur.format.js.InsertSpaceBeforeFunctionParenthesis": true,
+  "prettier.singleQuote": true,
   "files.exclude": {
     // hide *.js and *.js.map in ts project
     // include the defaults from VS Code
