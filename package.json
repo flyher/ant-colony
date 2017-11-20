@@ -54,6 +54,7 @@
     "copy-webpack-plugin": "^4.0.1",
     "vue-style-loader": "^3.0.1",
     "bootstrap": "^3.3.7",
-    "qrcodejs2": "^0.0.2"
+    "qrcodejs2": "^0.0.2",
+    "highlight": "^0.2.4"
   }
 }

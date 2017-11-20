@@ -31,6 +31,9 @@ module.exports = {
     ],
     'scripts/wb': [
       path.resolve(__dirname, './src/entry/wb.js')
+    ],
+    'scripts/httpheader': [
+      path.resolve(__dirname, './src/entry/httpheader.js')
     ]
   },
   output: {
