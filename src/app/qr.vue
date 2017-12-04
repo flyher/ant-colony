@@ -4,7 +4,7 @@
     <div class="content">
       <div class="input-url">
         <div class="col-lg-6">
-          <div class="alert alert-info" role="alert">create QE code</div>
+          <div class="alert alert-info" role="alert">create QR code</div>
           <div class="input-group">
             <input type="text" placeholder="url" class="form-control" v-model="url">
             <span class="input-group-btn">
