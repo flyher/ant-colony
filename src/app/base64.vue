@@ -54,7 +54,7 @@ export default {
     },
     decodeOrEncode: function () {
       this.decodeStr = 'decode: '+ Base64.decode(this.baseStr);
-      this.encodeStr= 'encode:'+ Base64.encode(this.baseStr);
+      this.encodeStr= 'encode: '+ Base64.encode(this.baseStr);
     }
   }
 }
