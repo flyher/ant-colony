@@ -37,6 +37,9 @@ module.exports = {
     ],
     'scripts/jwt': [
       path.resolve(__dirname, './src/entry/jwt.js')
+    ],
+    'scripts/base64': [
+      path.resolve(__dirname, './src/entry/base64.js')
     ]
   },
   output: {

@@ -2,7 +2,7 @@
   <div id="jwt">
     <ui-header></ui-header>
     <div class="content">
-      <div class="input-url">
+      <div class="input-str">
         <div class="col-lg-6">
           <div class="alert alert-info" role="alert" v-html="info"></div>
           <div class="input-group">
@@ -13,10 +13,10 @@
               </button>
             </span>
           </div>
+          <div id="jwt-code">
+            <span v-html="jwtCode"></span>
+          </div>
         </div>
-      </div>
-      <div id="jwt-code">
-        <span v-html="jwtCode"></span>
       </div>
     </div>
     <ui-footer></ui-footer>
@@ -28,7 +28,7 @@ import footer from '../components/footer'
 import { Base64 } from 'js-base64';
 // import highlight from 'highlight'
 export default {
-  name: 'wb',
+  name: 'jwt',
   components: {
     'ui-header': header,
     'ui-footer': footer
@@ -76,7 +76,7 @@ export default {
     width: 80%;
     height: 400px;
     margin: auto;
-    .input-url {
+    .input-str {
       width: 100%;
       display: grid;
       .col-lg-6 {
@@ -87,7 +87,7 @@ export default {
       // width: 130px;
       height: 60px;
       margin: 10px auto auto auto;
-      text-align: center;
+      text-align: left;
     }
   }
 }

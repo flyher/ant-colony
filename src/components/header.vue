@@ -58,6 +58,19 @@
                 </li>
               </ul>
             </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">String
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="page-jwt">
+                  <a href="jwt.html">jwt</a>
+                </li>
+                <li class="page-base64">
+                  <a href="base64.html">base64</a>
+                </li>
+              </ul>
+            </li>
           </ul>
         </div>
         <!--/.nav-collapse -->
@@ -82,7 +95,9 @@ export default {
       console.log('load header')
       let pathnames = window.location.pathname.split('/')
       let pagename = pathnames[pathnames.length - 1].replace(/.html/g, '')
-      $('.header').find('li').removeClass('active')
+      $('.header')
+        .find('li')
+        .removeClass('active')
       $('.page-' + pagename).addClass('active')
 
       // $('.header').removeClass('active')
