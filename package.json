@@ -55,6 +55,6 @@
     "vue-style-loader": "^3.0.1",
     "bootstrap": "^3.3.7",
     "qrcodejs2": "^0.0.2",
-    "highlight": "^0.2.4"
+    "js-base64":"^2.4.0"
   }
 }

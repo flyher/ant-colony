@@ -1,22 +1,26 @@
 <template>
-  <div id="qr">
+  <div id="base64">
     <ui-header></ui-header>
     <div class="content">
       <div class="input-url">
         <div class="col-lg-6">
           <div class="alert alert-info" role="alert" v-html="info"></div>
           <div class="input-group">
-            <input type="text" placeholder="url" class="form-control" v-model="url">
+            <input type="text" placeholder="base64/normal string" class="form-control" v-model="baseStr">
             <span class="input-group-btn">
-              <button class="btn btn-success" type="button" v-on:click="createQRCode()">
-                create
+              <button class="btn btn-success" type="button" v-on:click="decodeOrEncode()">
+                decode/encode
               </button>
             </span>
           </div>
+          <div id="decode-str">
+            <span v-html="decodeStr"></span>
+          </div>
+          <div id="encode-str">
+            <span v-html="encodeStr"></span>
+          </div>
         </div>
       </div>
-  
-      <div id="qrcode"></div>
     </div>
     <ui-footer></ui-footer>
   </div>
@@ -24,18 +28,21 @@
 <script>
 import header from '../components/header'
 import footer from '../components/footer'
-import QRCode from 'qrcodejs2'
+import { Base64 } from 'js-base64';
+
 export default {
-  name: 'qr',
+  name: 'base64',
   components: {
     'ui-header': header,
     'ui-footer': footer
   },
   data () {
     return {
-      info:'create QR code',
-      url: '',
-      msg: 'qr page'
+      info:'encode or decode base64',
+      baseStr: '',
+      decodeStr: '',
+      encodeStr: '',
+      msg: 'base64 page'
     }
   },
   mounted: function () {
@@ -43,24 +50,17 @@ export default {
   },
   methods: {
     init: function () {
-      console.log('load qr page')
+      console.log('load base64 page')
     },
-    createQRCode: function () {
-      $('#qrcode').html('');
-      new QRCode(document.getElementById('qrcode'), {
-        text: this.url,
-        width: 128,
-        height: 128,
-        colorDark: '#000000',
-        colorLight: '#ffffff',
-        correctLevel: QRCode.CorrectLevel.H
-      })
+    decodeOrEncode: function () {
+      this.decodeStr = 'decode: '+ Base64.decode(this.baseStr);
+      this.encodeStr= 'encode:'+ Base64.encode(this.baseStr);
     }
   }
 }
 </script>
 <style lang="scss">
-#qr {
+#base64 {
   .content {
     // background-color: skyblue;
     width: 80%;
@@ -73,10 +73,13 @@ export default {
         margin: auto;
       }
     }
-    #qrcode {
-      width: 130px;
-      height: 130px;
+    #decode-str,
+    #encode-str
+     {
+      // width: 130px;
+      // height: 60px;
       margin: 10px auto auto auto;
+      text-align: left;
     }
   }
 }

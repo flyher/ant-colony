@@ -34,6 +34,15 @@ module.exports = {
     ],
     'scripts/httpheader': [
       path.resolve(__dirname, './src/entry/httpheader.js')
+    ],
+    'scripts/brige': [
+      path.resolve(__dirname, './src/entry/brige.js')
+    ],
+    'scripts/jwt': [
+      path.resolve(__dirname, './src/entry/jwt.js')
+    ],
+    'scripts/base64': [
+      path.resolve(__dirname, './src/entry/base64.js')
     ]
   },
   output: {

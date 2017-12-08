@@ -17,6 +17,12 @@ You can visit this website here:
 
 - [x] decode weibo url from the picture url  [here](https://www.v2ex.com/t/388152)
 
+- [x] redirect to your website without referrer
+
+- [x] decode [jwt](https://en.wikipedia.org/wiki/JSON_Web_Token)
+
+- [x] decode/encode base64
+
 ### install
 
 

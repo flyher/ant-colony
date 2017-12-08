@@ -1,4 +1,70 @@
+
+// Place your settings in this file to overwrite the default settings
 {
-    "editor.tabSize": 2,
-    "editor.detectIndentation": false //是否试用缩进方案代理
+  // "editor.tabSize": 2,
+  // "editor.detectIndentation": false,//是否试用缩进方案代理
+  // FM项目配置
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  //
+  "editor.minimap.enabled": false, //代码缩微图
+  "extensions.autoUpdate": false,
+  "editor.renderIndentGuides": false, //竖向引导线
+  "files.associations": {
+    "*.tpl": "html"
+  },
+  "files.associations": {
+    "*.vue": "vue"
+  },
+  // "eslint.autoFixOnSave": true,
+  "eslint.options": {
+    "extensions": [
+      ".js",
+      ".vue"
+    ]
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "vue",
+    "vue-html"
+  ],
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/dist": true
+  },
+  "emmet.syntaxProfiles": {
+    // "javascript": "jsx",
+    "vue": "html",
+    "vue-html": "html"
+  },
+  "vetur.format.js.InsertSpaceBeforeFunctionParenthesis": true,
+  "prettier.singleQuote": true,
+  "files.exclude": {
+    // hide *.js and *.js.map in ts project
+    // include the defaults from VS Code
+    "**/.git": true,
+    "**/.DS_Store": true,
+    // exclude .js and .js.map files, when in a TypeScript project
+    "**/*.js": {
+      "when": "$(basename).ts"
+    },
+    "**/*.js.map": true,
+    "**/*.css":{
+      "when": "$(basename).less"
+    },
+    "**/*.css.map": true,
+    "**/*.min.css":{
+      "when": "$(basename).less"
+    },
+    "**/*.css":{
+      "when": "$(basename).min.css"
+    }
+  }
+  // "extensions.autoUpdate": true,
+  // "editor.renderWhitespace": "boundary",
+  // "editor.cursorBlinking": "smooth",
+  // "workbench.welcome.enabled": true
 }
