@@ -14,10 +14,10 @@
               </button>
             </span>
           </div>
+          <div id="wburl">
+            <a v-bind:href="wburl" target="_blank">{{wburl}}</a>
+          </div>
         </div>
-      </div>
-      <div id="wburl">
-        <a v-bind:href="wburl" target="_blank">{{wburl}}</a>
       </div>
     </div>
     <ui-footer></ui-footer>

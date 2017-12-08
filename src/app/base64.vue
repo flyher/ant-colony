@@ -77,7 +77,7 @@ export default {
     #encode-str
      {
       // width: 130px;
-      height: 60px;
+      // height: 60px;
       margin: 10px auto auto auto;
       text-align: left;
     }
