@@ -19,6 +19,10 @@ You can visit this website here:
 
 - [x] redirect to your website without referrer
 
+- [x] decode [jwt](https://en.wikipedia.org/wiki/JSON_Web_Token)
+
+- [x] decode/encode base64
+
 ### install
 
 
