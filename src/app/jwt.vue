@@ -81,13 +81,16 @@ export default {
       display: grid;
       .col-lg-6 {
         margin: auto;
+        .alert-info{
+            word-break: break-word;
+        }
+        #jwt-code {
+          // width: 130px;
+          height: 60px;
+          margin: 10px auto auto auto;
+          text-align: left;
+        }
       }
-    }
-    #jwt-code {
-      // width: 130px;
-      height: 60px;
-      margin: 10px auto auto auto;
-      text-align: left;
     }
   }
 }
