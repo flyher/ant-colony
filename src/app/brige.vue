@@ -13,11 +13,10 @@
               </button>
             </span>
           </div>
+          <div id='brigeUrl'>
+            <a v-bind:href="brigeUrl" target="_blank">{{brigeUrl}}</a>
+          </div>
         </div>
-      </div>
-  
-      <div id='brigeUrl'>
-        <a v-bind:href="brigeUrl" target="_blank">{{brigeUrl}}</a>
       </div>
     </div>
     <ui-footer></ui-footer>
@@ -56,7 +55,11 @@ export default {
       }
     },
     createBrigeUrl: function() {
-      this.brigeUrl = HOST + '/brige.html?url=' + encodeURIComponent(this.url);
+      if(this.url.indexOf('http')>=0){
+        this.brigeUrl = HOST + '/brige.html?url=' + encodeURIComponent(this.url);
+      }else{
+        this.brigeUrl = HOST + '/brige.html?url=http://' + encodeURIComponent(this.url);
+      }
     }
   }
 };
@@ -78,7 +81,7 @@ export default {
     #brigeUrl {
       height: 30px;
       padding: 5px;
-      text-align: center;
+      text-align: left;
     }
   }
 }
