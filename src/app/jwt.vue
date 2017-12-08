@@ -4,7 +4,7 @@
     <div class="content">
       <div class="input-url">
         <div class="col-lg-6">
-          <div class="alert alert-info" role="alert">{{info}}</div>
+          <div class="alert alert-info" role="alert" v-html="info"></div>
           <div class="input-group">
             <input type="text" placeholder="jwt string" class="form-control" v-model="jwtString">
             <span class="input-group-btn">
@@ -35,7 +35,7 @@ export default {
   },
   data () {
     return {
-      info:'decode jwt(JSON Web Token)\'s header and payload.\n https://en.wikipedia.org/wiki/JSON_Web_Token \n A jwt code=base64(header)+ . + base64(payload) + . + secret',
+      info:'decode jwt(JSON Web Token)\'s header and payload.<br/>https://en.wikipedia.org/wiki/JSON_Web_Token<br/>A jwt code=base64(header)+ . + base64(payload) + . + secret',
       jwtString: '',
       jwtCode: '',
       msg: 'jwt page'
@@ -61,7 +61,7 @@ export default {
       }
     },
     decodeBase64: function (jwtString) {
-      return Base64.decode(this.getJWTheader(jwtString)+'\n'+this.getJWTPayload(jwtString));
+      return Base64.decode(this.getJWTheader(jwtString))+'<br/>'+Base64.decode(this.getJWTPayload(jwtString));
     },
     decodeJWT: function () {
       this.jwtCode = this.decodeBase64(this.jwtString);
