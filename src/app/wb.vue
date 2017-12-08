@@ -93,7 +93,7 @@ export default {
       // width: 130px;
       height: 60px;
       margin: 10px auto auto auto;
-      text-align: center;
+      text-align: left;
     }
   }
 }
