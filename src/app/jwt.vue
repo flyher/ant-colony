@@ -16,7 +16,7 @@
         </div>
       </div>
       <div id="jwt-code">
-        <span>{{jwtCode}}</span>
+        <span v-html="jwtCode"></span>
       </div>
     </div>
     <ui-footer></ui-footer>
@@ -36,7 +36,7 @@ export default {
   data () {
     return {
       info:'decode jwt(JSON Web Token)\'s header and payload.<br/>https://en.wikipedia.org/wiki/JSON_Web_Token<br/>A jwt code=base64(header)+ . + base64(payload) + . + secret',
-      jwtString: '',
+      jwtString: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ',
       jwtCode: '',
       msg: 'jwt page'
     }
