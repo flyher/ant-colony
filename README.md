@@ -1,6 +1,7 @@
 # ant-colony
 A collection of useful gadgets, base on Vuejs, Webpack, ES6 and bootstrap. 
 
+[![Build Status](https://travis-ci.org/flyher/ant-colony.svg?branch=master)](https://travis-ci.org/flyher/ant-colony)
 
 You can visit this website here:
 
