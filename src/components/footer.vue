@@ -37,7 +37,7 @@ export default {
   text-align: center;
   background-color: #f9f9f9;
   border-top: 1px solid #e5e5e5;
-  position: absolute;
+  position: fixed;
   bottom: 0%;
   display: inline-block;
   width: 100%;

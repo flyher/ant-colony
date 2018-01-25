@@ -69,6 +69,9 @@
                 <li class="page-base64">
                   <a href="base64.html">base64</a>
                 </li>
+                <li class="page-jsonhtml">
+                  <a href="jsonhtml.html">json format</a>
+                </li>
               </ul>
             </li>
           </ul>

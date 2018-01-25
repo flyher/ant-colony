@@ -40,6 +40,9 @@ module.exports = {
     ],
     'scripts/base64': [
       path.resolve(__dirname, './src/entry/base64.js')
+    ],
+    'scripts/jsonhtml': [
+      path.resolve(__dirname, './src/entry/jsonhtml.js')
     ]
   },
   output: {
@@ -49,6 +52,12 @@ module.exports = {
   },
   module: {
     rules: [
+      // {
+      //   test: /\.html$/,
+      //   use: {
+      //     loader: 'html-loader'
+      //   }
+      // },
       {
         test: /\.scss$/,
         // use: ['style-loader', 'css-loader', 'sass-loader']
@@ -103,44 +112,79 @@ module.exports = {
           loader: 'babel-loader' // ['babel-loader', 'eslint-loader']
         }
       },
+      {
+        test: /\.(gif|png|jpe?g|svg)$/i,
+        // loader: 'file-loader',
+        // options: {
+        //   name: '[name].[ext]?[hash]'
+        // },
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 10000,
+              name: path.posix.join('assets', 'img/[name].[ext]')
+            }
+          },
+          {
+            loader: 'image-webpack-loader',
+            query: {
+              mozjpeg: {
+                progressive: true
+              },
+              gifsicle: {
+                interlaced: false
+              },
+              optipng: {
+                optimizationLevel: 7
+              },
+              pngquant: {
+                quality: '60-80',
+                speed: 4
+              }
+            }
+          }
+        ],
+        exclude: /node_modules/,
+        include: __dirname
+      },
       // {
-      //   test: /\.(gif|png|jpe?g|svg)$/i,
-      //   //     loader: 'file-loader',
-      //   //     options: {
-      //   //       name: '[name].[ext]?[hash]'
-      //   //     }
-      //   use: [
-      //     {
-      //       loader: 'url-loader',
-      //       options: {
-      //         limit: 10000,
-      //         name: path.posix.join('assets', 'img/[name].[ext]')
-      //       }
-      //     },
-      //     {
-      //       loader: 'image-webpack-loader',
-      //       query: {
-      //         mozjpeg: {
-      //           progressive: true
-      //         },
-      //         gifsicle: {
-      //           interlaced: false
-      //         },
-      //         optipng: {
-      //           optimizationLevel: 7
-      //         },
-      //         pngquant: {
-      //           quality: '60-80',
-      //           speed: 4
-      //         }
+      //   test: /\.(jpe?g|png|gif|svg)$/i,
+      //   loaders: ['file-loader?context=src/images&name=images/[path][name].[ext]', {
+      //     loader: 'image-webpack-loader',
+      //     query: {
+      //       mozjpeg: {
+      //         progressive: true
+      //       },
+      //       gifsicle: {
+      //         interlaced: false
+      //       },
+      //       optipng: {
+      //         optimizationLevel: 4
+      //       },
+      //       pngquant: {
+      //         quality: '75-90',
+      //         speed: 3
       //       }
       //     }
-      //   ],
+      //   }],
       //   exclude: /node_modules/,
       //   include: __dirname
       // },
       { test: /\.(woff2?|svg)$/, loader: 'url-loader?limit=10000' },
       { test: /\.(ttf|eot)$/, loader: 'file-loader' }
+      // {
+      //   test: /\.(gif|png|jpe?g|svg)$/i,
+      //   use: [
+      //     'file-loader',
+      //     {
+      //       loader: 'image-webpack-loader',
+      //       options: {
+      //         bypassOnDebug: true
+      //       }
+      //     }
+      //   ]
+      // }
     ]
   },
   resolve: {
@@ -158,6 +202,7 @@ module.exports = {
     //   filename: 'common.js',
     //   minChunks: Infinity
     // }),
+    // new ExtractTextPlugin('style.css'),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',

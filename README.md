@@ -28,6 +28,8 @@ You can visit this website here:
 
 - [x] decode/encode base64
 
+- [x] json data format
+
 ### install
 
 
@@ -63,7 +65,7 @@ npm run release
 ```
 
 
-### webpack config 
+### Q&A 
 
 [vue2-webpack-es6](https://github.com/yaoyonstudio/vue2-webpack-es6)
 
@@ -71,6 +73,9 @@ npm run release
 
 [vue2-demo](https://github.com/lzxb/vue2-demo)
 
+[Upgrading to babel-preset-env](http://babeljs.io/env)
+
+[Import image error: The system cannot find the path specified](https://github.com/tcoopman/image-webpack-loader/issues/68)
 
 ### Tools
 
