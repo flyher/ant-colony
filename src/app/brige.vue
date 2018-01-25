@@ -49,7 +49,6 @@ export default {
       console.log('load brige page');
       // redirect url
       let redirectUrl = commonService.findUrlParam('url');
-      console.log(redirectUrl);
       if (redirectUrl !== null) {
         this.info='redirect to:' + redirectUrl;
         window.location.href = redirectUrl;
