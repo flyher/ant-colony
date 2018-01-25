@@ -2,19 +2,20 @@
   <div id='jsonhtml'>
     <ui-header></ui-header>
     <div class='content'>
-      <div class='input-url'>
+      <div class='input-area'>
         <div class='col-lg-6'>
           <div class="alert alert-info" role="alert" v-html="info"></div>
-          <div class='input-group'>
+          <div class='text-area'>
             <textarea type='text' placeholder='json data' class='form-control' v-model='jsonstr' />
-            <span class='input-group-btn'>
-              <button class='btn btn-success' type='button' v-on:click='jsonToHtml()'>
-                parse
-              </button>
-            </span>
           </div>
-          <div id='htmlcode' class="jumbotron" v-html="jsonhml">
-            <pre class="jf-CodeContainer"><span class="jf-String">""</span></pre>
+          <div>
+            <button class='btn btn-success' type='button' v-on:click='jsonToHtml()'>
+                parse
+            </button>
+          </div>    
+        </div>
+        <div class="col-lg-6">
+          <div id='htmlcode' v-html="jsonhml">
           </div>
         </div>
       </div>
@@ -38,7 +39,7 @@ export default {
       info: 'format json data',
       msg: 'jsonhtml page',
       jsonstr: '',
-      jsonhml: ''
+      jsonhml: '<pre class="jf-CodeContainer"></pre>'
     };
   },
   mounted: function() {
@@ -63,19 +64,39 @@ export default {
     width: 80%;
     height: 400px;
     margin: auto;
-    .input-url {
+    .input-area {
       width: 100%;
       display: grid;
       .col-lg-6 {
-        margin: auto;
+        margin: auto !important;
+        .input-group {
+          textarea {
+            height: 200px;
+            overflow-y: auto;
+          }
+        }
+        .row{
+          .input-group-btn{
+            float:right;
+            margin-top: 5px;
+            margin-bottom: 5px;
+          }
+        }
+        .btn{
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+        #htmlcode {
+          overflow: auto;
+          min-height: 200px;
+          max-height: 300px;
+          min-width: 80%;
+          max-width: 1000px;
+          margin-top: 5px;
+          background-color: white;
+          margin-bottom: 100px;
+        }
       }
-    }
-    #htmlcode {
-      overflow: auto;
-      min-height: 200px;
-      max-height: 300px;
-      margin-top: 5px;
-      background-color: white;
     }
   }
 }
