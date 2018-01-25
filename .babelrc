@@ -1,13 +1,11 @@
 {
   "presets": [
-    [
-      "es2015"
-    ]
+    "env",
+    {}
   ],
   "plugins": [
     "transform-runtime"
   ],
   // "comments": false,
-  "env": {
-  }
+  "env": {}
 }

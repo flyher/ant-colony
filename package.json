@@ -14,14 +14,14 @@
   "author": "flyher",
   "license": "GPL",
   "dependencies": {
-    "vue": "^2.3.4",
-    "vue-router": "^2.6.0",
-    "vuex": "^2.3.1"
+    "vue": "^2.5.13",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "babel-core": "^6.23.1",
     "babel-loader": "^7.0.0",
-    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
     "eslint": "^3.19.0",
     "eslint-loader": "^1.8.0",
     "eslint-plugin-html": "^3.0.0",
@@ -36,7 +36,7 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "node-sass": "^4.5.3",
     "css-loader": "^0.28.4",
-    "file-loader": "^0.11.2",
+    "file-loader": "^1.1.6",
     "less-loader": "^4.0.4",
     "style-loader": "^0.18.2",
     "url-loader": "^0.5.9",
@@ -49,12 +49,12 @@
     "sass-loader": "^6.0.6",
     "postcss-loader": "^1.3.3",
     "autoprefixer": "^7.1.1",
-    "babel-preset-env": "^1.5.2",
     "clean-webpack-plugin": "^0.1.16",
     "copy-webpack-plugin": "^4.0.1",
     "vue-style-loader": "^3.0.1",
     "bootstrap": "^3.3.7",
     "qrcodejs2": "^0.0.2",
-    "js-base64":"^2.4.0"
+    "js-base64": "^2.4.0",
+    "image-webpack-loader": "^4.0.0"
   }
 }

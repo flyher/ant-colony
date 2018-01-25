@@ -1,2 +1,3 @@
 src/lib/*.js
 src/app/*.vue
+src/lib/*/*.js
