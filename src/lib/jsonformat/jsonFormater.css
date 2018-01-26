@@ -27,12 +27,12 @@
     color: #000000;
     font-weight: bold;
 }
-.jf-CodeContainer {
+/* .jf-CodeContainer {
     margin-top: 0;
     margin-bottom: 0;
     text-align: left;
     overflow: auto;
-}
+} */
 .imgToggle{
   cursor: pointer;
 }

@@ -39,7 +39,7 @@ export default {
       info: 'format json data',
       msg: 'jsonhtml page',
       jsonstr: '',
-      jsonhml: '<pre class="jf-CodeContainer"></pre>'
+      jsonhml: '<pre class="row"></pre>'
     };
   },
   mounted: function() {
@@ -87,7 +87,7 @@ export default {
           margin-bottom: 10px;
         }
         #htmlcode {
-          overflow: auto;
+          // overflow: auto;
           min-height: 200px;
           max-height: 300px;
           min-width: 80%;
@@ -95,6 +95,9 @@ export default {
           margin-top: 5px;
           background-color: white;
           margin-bottom: 100px;
+          .row{
+            padding: 5px;
+          }
         }
       }
     }
