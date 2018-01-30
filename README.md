@@ -1,9 +1,9 @@
 # ant-colony
 
-[![Build Status](https://travis-ci.org/flyher/ant-colony.svg?branch=master)](https://travis-ci.org/flyher/ant-colony?branch=master)
+[![Build Status](https://travis-ci.org/flyher/ant-colony.svg?branch=dev_0.20)](https://travis-ci.org/flyher/ant-colony?branch=dev_0.20)
 [![Release Version](https://img.shields.io/github/release/flyher/ant-colony.svg)](https://github.com/flyher/ant-colony/releases)
 [![Issues](https://img.shields.io/github/issues/flyher/ant-colony.svg)](https://github.com/flyher/ant-colony/issues)
-[![Software License](https://img.shields.io/github/license/flyher/ant-colony.svg)](https://github.com/flyher/ant-colony/blob/master/LICENSE)
+[![Software License](https://img.shields.io/github/license/flyher/ant-colony.svg?branch=dev_0.20)](https://github.com/flyher/ant-colony/blob/dev_0.20/LICENSE)
 
 A single page web application, base on Vuejs, Webpack, ES6 and bootstrap.
 
