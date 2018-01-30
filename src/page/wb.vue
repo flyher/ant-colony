@@ -1,8 +1,6 @@
 <template>
   <div id="wb">
-    <ui-header></ui-header>
     <div class="content">
-      
       <div class="input-url">
         <div class="col-lg-6">
           <div class="alert alert-info" role="alert" v-html="info"></div>
@@ -20,45 +18,39 @@
         </div>
       </div>
     </div>
-    <ui-footer></ui-footer>
   </div>
 </template>
 <script>
-import header from '../components/header'
-import footer from '../components/footer'
-import QRCode from 'qrcodejs2'
 export default {
   name: 'wb',
-  components: {
-    'ui-header': header,
-    'ui-footer': footer
-  },
+  components: {},
   data () {
     return {
-      info:'decode weibo url from the picture url',
+      info: 'decode weibo url from the picture url',
       url: '',
       wburl: '',
       msg: 'wb page'
-    }
+    };
   },
   mounted: function () {
-    this.init()
+    this.init();
   },
   methods: {
     init: function () {
-      console.log('load wb page')
+      console.log('load wb page');
     },
-    string62to10: function (number_code) {
-      number_code = String(number_code);
-      var chars = '0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIGKLMNOPQRSTUVWXYZ',
-        radix = chars.length,
-        len = number_code.length,
-        i = 0,
-        origin_number = 0;
+    string62to10: function (numberCode) {
+      var chars = '0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIGKLMNOPQRSTUVWXYZ';
+      var radix = chars.length;
+      var len = numberCode.length;
+      var i = 0;
+      var originNumber = 0;
+      numberCode = String(numberCode);
       while (i < len) {
-        origin_number += Math.pow(radix, i++) * chars.indexOf(number_code.charAt(len - i) || 0);
+        originNumber +=
+          Math.pow(radix, i++) * chars.indexOf(numberCode.charAt(len - i) || 0);
       }
-      return origin_number;
+      return originNumber;
     },
     decode: function (url) {
       var lastIndexOfSlash = url.lastIndexOf('/');
@@ -73,7 +65,7 @@ export default {
       this.wburl = 'http://weibo.com/u/' + this.decode(this.url);
     }
   }
-}
+};
 </script>
 <style lang="scss">
 #wb {

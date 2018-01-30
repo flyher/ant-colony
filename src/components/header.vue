@@ -9,7 +9,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">Ant-Colony</a>
+          <a class="navbar-brand" href="#/index">Ant-Colony</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -22,7 +22,7 @@
               </a>
               <ul class="dropdown-menu">
                 <li class="page-qr">
-                  <a href="qr.html">QR</a>
+                  <a href="#qr">QR</a>
                 </li>
                 <!-- <li><a href="#">Another action</a></li> -->
                 <!-- <li><a href="#">Something else here</a></li> -->
@@ -38,7 +38,7 @@
               </a>
               <ul class="dropdown-menu">
                 <li class="page-wb">
-                  <a href="wb.html">weibo</a>
+                  <a href="#/wb">weibo</a>
                 </li>
                 <!-- <li><a href="#">Another action</a></li> -->
                 <!-- <li><a href="#">Something else here</a></li> -->
@@ -54,7 +54,7 @@
               </a>
               <ul class="dropdown-menu">
                 <li class="page-brige">
-                  <a href="brige.html">brige</a>
+                  <a href="#/brige">brige</a>
                 </li>
               </ul>
             </li>
@@ -64,13 +64,13 @@
               </a>
               <ul class="dropdown-menu">
                 <li class="page-jwt">
-                  <a href="jwt.html">jwt</a>
+                  <a href="#/jwt">jwt</a>
                 </li>
                 <li class="page-base64">
-                  <a href="base64.html">base64</a>
+                  <a href="#/base64">base64</a>
                 </li>
                 <li class="page-jsonhtml">
-                  <a href="jsonhtml.html">json format</a>
+                  <a href="#/jsonhtml">json format</a>
                 </li>
               </ul>
             </li>
@@ -82,31 +82,31 @@
   </div>
 </template>
 <script>
-import '../../node_modules/bootstrap/dist/js/bootstrap.js'
+import '../../node_modules/bootstrap/dist/js/bootstrap.js';
 export default {
   name: 'header',
   data () {
     return {
       msg: 'header'
-    }
+    };
   },
   mounted: function () {
-    this.init()
+    this.init();
   },
   methods: {
     init: function () {
-      console.log('load header')
-      let pathnames = window.location.pathname.split('/')
-      let pagename = pathnames[pathnames.length - 1].replace(/.html/g, '')
+      console.log('load header');
+      let pathnames = window.location.pathname.split('/');
+      let pagename = pathnames[pathnames.length - 1].replace(/g/, '');
       $('.header')
         .find('li')
-        .removeClass('active')
-      $('.page-' + pagename).addClass('active')
+        .removeClass('active');
+      $('.page-' + pagename).addClass('active');
 
       // $('.header').removeClass('active')
     }
   }
-}
+};
 </script>
 <style scoped lang="scss">
 @import '../scss/global.scss';

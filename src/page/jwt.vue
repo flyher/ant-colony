@@ -1,6 +1,5 @@
 <template>
   <div id="jwt">
-    <ui-header></ui-header>
     <div class="content">
       <div class="input-str">
         <div class="col-lg-6">
@@ -19,55 +18,55 @@
         </div>
       </div>
     </div>
-    <ui-footer></ui-footer>
   </div>
 </template>
 <script>
-import header from '../components/header'
-import footer from '../components/footer'
 import { Base64 } from 'js-base64';
 // import highlight from 'highlight'
 export default {
   name: 'jwt',
-  components: {
-    'ui-header': header,
-    'ui-footer': footer
-  },
+  components: {},
   data () {
     return {
-      info:'decode jwt(JSON Web Token)\'s header and payload.<br/>https://en.wikipedia.org/wiki/JSON_Web_Token<br/>A jwt code=base64(header)+ . + base64(payload) + . + secret',
-      jwtString: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ',
+      info:
+        'decode jwt(JSON Web Token)\'s header and payload.<br/>https://en.wikipedia.org/wiki/JSON_Web_Token<br/>A jwt code=base64(header)+ . + base64(payload) + . + secret',
+      jwtString:
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ',
       jwtCode: '',
       msg: 'jwt page'
-    }
+    };
   },
   mounted: function () {
-    this.init()
+    this.init();
   },
   methods: {
     init: function () {
-      console.log('load jwt page')
+      console.log('load jwt page');
     },
     getJWTheader: function (str) {
       let strs = str.split('.');
-      if(strs.length>=3){
+      if (strs.length >= 3) {
         return strs[0];
       }
     },
-    getJWTPayload:function(str){
+    getJWTPayload: function (str) {
       let strs = str.split('.');
-      if(strs.length>=3){
+      if (strs.length >= 3) {
         return strs[1];
       }
     },
     decodeBase64: function (jwtString) {
-      return Base64.decode(this.getJWTheader(jwtString))+'<br/>'+Base64.decode(this.getJWTPayload(jwtString));
+      return (
+        Base64.decode(this.getJWTheader(jwtString)) +
+        '<br/>' +
+        Base64.decode(this.getJWTPayload(jwtString))
+      );
     },
     decodeJWT: function () {
       this.jwtCode = this.decodeBase64(this.jwtString);
     }
   }
-}
+};
 </script>
 <style lang="scss">
 #jwt {
@@ -81,8 +80,8 @@ export default {
       display: grid;
       .col-lg-6 {
         margin: auto;
-        .alert-info{
-            word-break: break-word;
+        .alert-info {
+          word-break: break-word;
         }
         #jwt-code {
           // width: 130px;

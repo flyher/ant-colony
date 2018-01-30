@@ -3,21 +3,21 @@ module.exports = {
    * get url params
    */
   getUrlParams: function (search) {
-    let urlParam = {}
+    let urlParam = {};
     if (search.length > 1) {
-      let params = search.substr(1, search.length - 1).split('&')
+      let params = search.substr(1, search.length - 1).split('&');
       params.forEach((item) => {
-        let param = item.split('=')
-        urlParam[param[0]] = param[1]
-      })
+        let param = item.split('=');
+        urlParam[param[0]] = param[1];
+      });
     }
-    return urlParam
+    return urlParam;
   },
   /**
    * get one param
    */
   findUrlParam: function (key) {
-    let paramValue = this.getUrlParams(decodeURIComponent(window.location.search))[key]
-    return paramValue === undefined ? null : paramValue
+    let paramValue = this.getUrlParams(decodeURIComponent(window.location.search))[key];
+    return paramValue === undefined ? null : paramValue;
   }
-}
+};

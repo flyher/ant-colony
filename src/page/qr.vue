@@ -1,6 +1,5 @@
 <template>
   <div id="qr">
-    <ui-header></ui-header>
     <div class="content">
       <div class="input-url">
         <div class="col-lg-6">
@@ -15,35 +14,28 @@
           </div>
         </div>
       </div>
-  
       <div id="qrcode"></div>
     </div>
-    <ui-footer></ui-footer>
   </div>
 </template>
 <script>
-import header from '../components/header'
-import footer from '../components/footer'
-import QRCode from 'qrcodejs2'
+import QRCode from 'qrcodejs2';
 export default {
   name: 'qr',
-  components: {
-    'ui-header': header,
-    'ui-footer': footer
-  },
+  components: {},
   data () {
     return {
-      info:'create QR code',
+      info: 'create QR code',
       url: '',
       msg: 'qr page'
-    }
+    };
   },
   mounted: function () {
-    this.init()
+    this.init();
   },
   methods: {
     init: function () {
-      console.log('load qr page')
+      console.log('load qr page');
     },
     createQRCode: function () {
       $('#qrcode').html('');
@@ -54,10 +46,10 @@ export default {
         colorDark: '#000000',
         colorLight: '#ffffff',
         correctLevel: QRCode.CorrectLevel.H
-      })
+      });
     }
   }
-}
+};
 </script>
 <style lang="scss">
 #qr {

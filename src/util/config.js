@@ -1,2 +1,2 @@
-const HOST = 'https://tools.99diary.com'
-exports.HOST = HOST
+const HOST = 'https://tools.99diary.com';
+exports.HOST = HOST;

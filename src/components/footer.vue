@@ -17,17 +17,17 @@ export default {
   data () {
     return {
       msg: 'footer'
-    }
+    };
   },
   mounted: function () {
-    this.init()
+    this.init();
   },
   methods: {
     init: function () {
-      console.log('load footer')
+      console.log('load footer');
     }
   }
-}
+};
 </script>
 <style scoped lang="scss">
 @import '../scss/global.scss';

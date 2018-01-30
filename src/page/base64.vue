@@ -1,6 +1,5 @@
 <template>
   <div id="base64">
-    <ui-header></ui-header>
     <div class="content">
       <div class="input-url">
         <div class="col-lg-6">
@@ -22,42 +21,35 @@
         </div>
       </div>
     </div>
-    <ui-footer></ui-footer>
   </div>
 </template>
 <script>
-import header from '../components/header'
-import footer from '../components/footer'
 import { Base64 } from 'js-base64';
-
 export default {
   name: 'base64',
-  components: {
-    'ui-header': header,
-    'ui-footer': footer
-  },
+  components: {},
   data () {
     return {
-      info:'encode or decode base64',
+      info: 'encode or decode base64',
       baseStr: '',
       decodeStr: '',
       encodeStr: '',
       msg: 'base64 page'
-    }
+    };
   },
   mounted: function () {
-    this.init()
+    this.init();
   },
   methods: {
     init: function () {
-      console.log('load base64 page')
+      console.log('load base64 page');
     },
     decodeOrEncode: function () {
-      this.decodeStr = 'decode: '+ Base64.decode(this.baseStr);
-      this.encodeStr= 'encode: '+ Base64.encode(this.baseStr);
+      this.decodeStr = 'decode: ' + Base64.decode(this.baseStr);
+      this.encodeStr = 'encode: ' + Base64.encode(this.baseStr);
     }
   }
-}
+};
 </script>
 <style lang="scss">
 #base64 {
@@ -74,8 +66,7 @@ export default {
       }
     }
     #decode-str,
-    #encode-str
-     {
+    #encode-str {
       // width: 130px;
       // height: 60px;
       margin: 10px auto auto auto;

@@ -23,27 +23,31 @@ module.exports = {
     // 'scripts/vendor': ['vue', 'vue-router', 'axios'],
     // 'scripts/vendor':
     // 'scripts/index':
-    'scripts/index': [
-      path.resolve(__dirname, './src/entry/index.js')
-    ],
-    'scripts/qr': [
-      path.resolve(__dirname, './src/entry/qr.js')
-    ],
-    'scripts/wb': [
-      path.resolve(__dirname, './src/entry/wb.js')
-    ],
-    'scripts/brige': [
-      path.resolve(__dirname, './src/entry/brige.js')
-    ],
-    'scripts/jwt': [
-      path.resolve(__dirname, './src/entry/jwt.js')
-    ],
-    'scripts/base64': [
-      path.resolve(__dirname, './src/entry/base64.js')
-    ],
-    'scripts/jsonhtml': [
-      path.resolve(__dirname, './src/entry/jsonhtml.js')
+    // 'scripts/index': [
+    //   path.resolve(__dirname, './src/entry/index.js')
+    // ],
+    // 'scripts/qr': [
+    //   path.resolve(__dirname, './src/entry/qr.js')
+    // ],
+    // 'scripts/wb': [
+    //   path.resolve(__dirname, './src/entry/wb.js')
+    // ],
+    // 'scripts/brige': [
+    //   path.resolve(__dirname, './src/entry/brige.js')
+    // ],
+    // 'scripts/jwt': [
+    //   path.resolve(__dirname, './src/entry/jwt.js')
+    // ],
+    // 'scripts/base64': [
+    //   path.resolve(__dirname, './src/entry/base64.js')
+    // ],
+    // 'scripts/jsonhtml': [
+    //   path.resolve(__dirname, './src/entry/jsonhtml.js')
+    // ],
+    'scripts/app': [
+      path.resolve(__dirname, './src/entry/app.js')
     ]
+
   },
   output: {
     path: path.join(__dirname, '/dist'),
@@ -237,4 +241,4 @@ module.exports = {
     }])
   ],
   devtool: '#eval-source-map'
-}
+};

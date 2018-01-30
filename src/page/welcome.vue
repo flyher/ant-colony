@@ -1,27 +1,20 @@
 <template>
   <div id="index">
-    <ui-header></ui-header>
     <div class="content">
       {{msg}}
     </div>
-    <ui-footer></ui-footer>
   </div>
 </template>
 <script>
 // import Vue from 'vue'
-import '../../node_modules/bootstrap/dist/js/bootstrap.js'
-import header from '../components/header'
-import footer from '../components/footer'
+import '../../node_modules/bootstrap/dist/js/bootstrap.js';
 export default {
-  name: 'index',
-  components: {
-    'ui-header': header,
-    'ui-footer': footer
-  },
+  name: 'welcome',
+  components: {},
   data () {
     return {
       msg: 'Welcome to Ant-Colony'
-    }
+    };
   },
   // mounted: function () {
   //   this.init()
@@ -31,7 +24,7 @@ export default {
     //   console.log('load index')
     // }
   }
-}
+};
 </script>
 <style lang="scss">
 #index {

@@ -1,6 +1,5 @@
 <template>
   <div id='brige'>
-    <ui-header></ui-header>
     <div class='content'>
       <div class='input-url'>
         <div class='col-lg-6'>
@@ -19,46 +18,42 @@
         </div>
       </div>
     </div>
-    <ui-footer></ui-footer>
   </div>
 </template>
 <script>
-import header from '../components/header';
-import footer from '../components/footer';
 import commonService from '../service/common';
 import { HOST } from '../util/config';
 export default {
   name: 'brige',
-  components: {
-    'ui-header': header,
-    'ui-footer': footer
-  },
-  data() {
+  components: {},
+  data () {
     return {
-      info:'redirect to your website without referrer',
+      info: 'redirect to your website without referrer',
       url: '',
       msg: 'brige page',
       brigeUrl: ''
     };
   },
-  mounted: function() {
+  mounted: function () {
     this.init();
   },
   methods: {
-    init: function() {
+    init: function () {
       console.log('load brige page');
       // redirect url
       let redirectUrl = commonService.findUrlParam('url');
       if (redirectUrl !== null) {
-        this.info='redirect to:' + redirectUrl;
+        this.info = 'redirect to:' + redirectUrl;
         window.location.href = redirectUrl;
       }
     },
-    createBrigeUrl: function() {
-      if(this.url.indexOf('http')>=0){
-        this.brigeUrl = HOST + '/brige.html?url=' + encodeURIComponent(this.url);
-      }else{
-        this.brigeUrl = HOST + '/brige.html?url=http://' + encodeURIComponent(this.url);
+    createBrigeUrl: function () {
+      if (this.url.indexOf('http') >= 0) {
+        this.brigeUrl =
+          HOST + '/brige.html?url=' + encodeURIComponent(this.url);
+      } else {
+        this.brigeUrl =
+          HOST + '/brige.html?url=http://' + encodeURIComponent(this.url);
       }
     }
   }

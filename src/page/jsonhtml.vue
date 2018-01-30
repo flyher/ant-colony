@@ -1,6 +1,5 @@
 <template>
   <div id='jsonhtml'>
-    <ui-header></ui-header>
     <div class='content'>
       <div class='input-area'>
         <div class='col-lg-6'>
@@ -10,9 +9,9 @@
           </div>
           <div>
             <button class='btn btn-success' type='button' v-on:click='jsonToHtml()'>
-                parse
+              parse
             </button>
-          </div>    
+          </div>
         </div>
         <div class="col-lg-6">
           <div id='htmlcode' v-html="jsonhml">
@@ -20,21 +19,14 @@
         </div>
       </div>
     </div>
-    <ui-footer></ui-footer>
   </div>
 </template>
 <script>
-import header from '../components/header';
-import footer from '../components/footer';
 import { JsonFormater } from '../lib/jsonformat/jsonFormater';
-
 export default {
   name: 'jsonhtml',
-  components: {
-    'ui-header': header,
-    'ui-footer': footer
-  },
-  data() {
+  components: {},
+  data () {
     return {
       info: 'format json data',
       msg: 'jsonhtml page',
@@ -42,14 +34,14 @@ export default {
       jsonhml: '<pre class="row"></pre>'
     };
   },
-  mounted: function() {
+  mounted: function () {
     this.init();
   },
   methods: {
-    init: function() {
+    init: function () {
       console.log('load brige page');
     },
-    jsonToHtml: function() {
+    jsonToHtml: function () {
       let jsonFormater = new JsonFormater({});
       this.jsonhml = jsonFormater.doFormat(this.jsonstr);
     }
@@ -75,14 +67,14 @@ export default {
             overflow-y: auto;
           }
         }
-        .row{
-          .input-group-btn{
-            float:right;
+        .row {
+          .input-group-btn {
+            float: right;
             margin-top: 5px;
             margin-bottom: 5px;
           }
         }
-        .btn{
+        .btn {
           margin-top: 10px;
           margin-bottom: 10px;
         }
@@ -95,7 +87,7 @@ export default {
           margin-top: 5px;
           background-color: white;
           margin-bottom: 100px;
-          .row{
+          .row {
             padding: 5px;
           }
         }
