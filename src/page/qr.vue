@@ -39,7 +39,7 @@ export default {
     },
     createQRCode: function () {
       $('#qrcode').html('');
-      new QRCode(document.getElementById('qrcode'), {
+      new QRCode(document.getElementById('qrcode'), {  // eslint-disable-line no-new
         text: this.url,
         width: 128,
         height: 128,

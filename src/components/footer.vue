@@ -4,7 +4,7 @@
     <p>
       Theme by
       <a href="https://getbootstrap.com">Bootstrap</a>&nbsp;&nbsp; Powered by
-      <a href="https://github.com/flyher">flyher</a>
+      <a href="https://github.com/flyher/ant-colony">ant-colony@v0.2</a>
     </p>
     <p>
       <a href="#">Back to top</a>

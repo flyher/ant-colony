@@ -22,7 +22,7 @@
               </a>
               <ul class="dropdown-menu">
                 <li class="page-qr">
-                  <a href="#qr">QR</a>
+                  <a href="#/qr">QR</a>
                 </li>
                 <!-- <li><a href="#">Another action</a></li> -->
                 <!-- <li><a href="#">Something else here</a></li> -->

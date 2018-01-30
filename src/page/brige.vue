@@ -21,7 +21,6 @@
   </div>
 </template>
 <script>
-import commonService from '../service/common';
 import { HOST } from '../util/config';
 export default {
   name: 'brige',
@@ -41,8 +40,11 @@ export default {
     init: function () {
       console.log('load brige page');
       // redirect url
-      let redirectUrl = commonService.findUrlParam('url');
-      if (redirectUrl !== null) {
+      let redirectUrl = decodeURIComponent(window.location.hash.replace('#/brige?url=', '').replace('#/brige', ''));
+      if (redirectUrl !== null && redirectUrl.length > 0) {
+        if (redirectUrl.indexOf(HOST) >= 0) {
+          return false;
+        };
         this.info = 'redirect to:' + redirectUrl;
         window.location.href = redirectUrl;
       }
@@ -50,10 +52,10 @@ export default {
     createBrigeUrl: function () {
       if (this.url.indexOf('http') >= 0) {
         this.brigeUrl =
-          HOST + '/brige.html?url=' + encodeURIComponent(this.url);
+          HOST + '#/brige?url=' + encodeURIComponent(this.url);
       } else {
         this.brigeUrl =
-          HOST + '/brige.html?url=http://' + encodeURIComponent(this.url);
+          HOST + '#/brige?url=http://' + encodeURIComponent(this.url);
       }
     }
   }
