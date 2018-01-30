@@ -5,7 +5,7 @@
 [![Issues](https://img.shields.io/github/issues/flyher/ant-colony.svg)](https://github.com/flyher/ant-colony/issues)
 [![Software License](https://img.shields.io/github/license/flyher/ant-colony.svg)](https://github.com/flyher/ant-colony/blob/master/LICENSE)
 
-A single page web application, base on Vuejs, Webpack, ES6 and bootstrap. 
+A single page web application, base on Vuejs, Webpack, ES6 and bootstrap.
 
 You can visit this website here:
 
