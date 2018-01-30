@@ -1,9 +1,9 @@
 # ant-colony
 
-[![Build Status](https://travis-ci.org/flyher/ant-colony.svg?branch=master)](https://travis-ci.org/flyher/ant-colony?branch=master)
+[![Build Status](https://travis-ci.org/flyher/ant-colony.svg?branch=release_0.10)](https://travis-ci.org/flyher/ant-colony?branch=release_0.10)
 [![Release Version](https://img.shields.io/github/release/flyher/ant-colony.svg)](https://github.com/flyher/ant-colony/releases)
 [![Issues](https://img.shields.io/github/issues/flyher/ant-colony.svg)](https://github.com/flyher/ant-colony/issues)
-[![Software License](https://img.shields.io/github/license/flyher/ant-colony.svg)](https://github.com/flyher/ant-colony/blob/master/LICENSE)
+[![Software License](https://img.shields.io/github/license/flyher/ant-colony.svg)](https://github.com/flyher/ant-colony/blob/release_0.10/LICENSE)
 
 A collection of useful gadgets, base on Vuejs, Webpack, ES6 and bootstrap. 
 
