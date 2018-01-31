@@ -9,7 +9,9 @@ import Qr from '../page/qr';
 import Wb from '../page/wb';
 
 Vue.use(VueRouter);
-Vue.config.debug = true;
+Vue.config.debug = false;
+Vue.config.devtools = false;
+Vue.config.productionTip = false;
 
 export default new VueRouter({
   // mode: 'history',

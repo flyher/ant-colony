@@ -6,9 +6,9 @@
   "scripts": {
     "start": "npm run server | npm run dev",
     "server": "webpack-dev-server --content-base dist/",
-    "local": "set NODE_ENV='dev-local8899' & webpack-dev-server --progress --colors --port 8889",
-    "dev": "set NODE_ENV='dev-localdir' & webpack-dev-server --progress --colors  --content-base ./dist/ --port 8889",
-    "release": "set NODE_ENV='release' & webpack -p",
+    "local": "set NODE_ENV=dev-local8899 & webpack-dev-server --progress --colors --port 8889",
+    "dev": "set NODE_ENV=dev-localdir & webpack-dev-server --progress --colors  --content-base ./dist/ --port 8889",
+    "release": "set NODE_ENV=release & webpack -p",
     "build": "webpack -p"
   },
   "author": "flyher",

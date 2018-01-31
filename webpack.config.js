@@ -5,6 +5,10 @@ const extractSCSS = new ExtractTextPlugin({ filename: 'css/style.css', disable: 
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
+
+// set NODE_ENV=release & webpack -p  process.env.NODE_ENV.trim() === '\'release\''
+// set NODE_ENV='release' & webpack -p process.env.NODE_ENV.trim() === 'release'
+
 module.exports = {
   entry: {
     'scripts/last': [
@@ -51,7 +55,7 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, '/dist'),
-    publicPath: process.env.NODE_ENV === 'release' ? '/dist/' : 'http://localhost:8889/dist/',
+    publicPath: process.env.NODE_ENV.trim() === 'release' ? '/dist/' : 'http://localhost:8889/dist/',
     filename: '[name].bundle.js' // '[name].js?[hash]'
   },
   module: {
@@ -240,5 +244,5 @@ module.exports = {
       ignore: ['.*']
     }])
   ],
-  devtool: '#eval-source-map'
+  devtool: process.env.NODE_ENV.trim() === 'release' ? false : '#eval-source-map'
 };
