@@ -1,5 +1,5 @@
 # ant-colony
-A collection of useful gadgets, base on Vuejs, Webpack, ES6 and bootstrap. 
+A single page web application, base on Vuejs, Webpack, ES6 and bootstrap.
 
 
 You can visit this website here:
