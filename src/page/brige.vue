@@ -52,10 +52,10 @@ export default {
     createBrigeUrl: function () {
       if (this.url.indexOf('http') >= 0) {
         this.brigeUrl =
-          HOST + '#/brige?url=' + encodeURIComponent(this.url);
+          HOST + '/#/brige?url=' + encodeURIComponent(this.url);
       } else {
         this.brigeUrl =
-          HOST + '#/brige?url=http://' + encodeURIComponent(this.url);
+          HOST + '/#/brige?url=http://' + encodeURIComponent(this.url);
       }
     }
   }
