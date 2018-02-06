@@ -3,7 +3,7 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <button type="button" class="navbar-toggle collapsed navbar" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -102,8 +102,9 @@ export default {
         .find('li')
         .removeClass('active');
       $('.page-' + pagename).addClass('active');
-
-      // $('.header').removeClass('active')
+      $('.dropdown-menu').find('li').bind('click', function () {
+        $('.navbar-header').find('button').click();
+      });
     }
   }
 };
@@ -112,6 +113,7 @@ export default {
 @import '../scss/global.scss';
 .header {
   height: 60px;
-  width: 100%; // background-color: skyblue;
+  width: 100%; 
+  // background-color: skyblue;
 }
 </style>
