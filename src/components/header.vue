@@ -102,8 +102,12 @@ export default {
         .find('li')
         .removeClass('active');
       $('.page-' + pagename).addClass('active');
+      
       $('.dropdown-menu').find('li').bind('click', function () {
-        $('.navbar-header').find('button').click();
+        // 展开时点击会触发折叠
+        if ($('#navbar')[0].getAttribute('aria-expanded') === 'true') {
+          $('.navbar-header').find('button').click();
+        }
       });
     }
   }
@@ -113,7 +117,7 @@ export default {
 @import '../scss/global.scss';
 .header {
   height: 60px;
-  width: 100%; 
+  width: 100%;
   // background-color: skyblue;
 }
 </style>

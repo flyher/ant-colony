@@ -63,6 +63,14 @@ the code will release in `./dist/`
 npm run release
 ```
 
+pre
+
+the code  will release in `./dist/` with sourceMap
+```shell
+npm run pre
+```
+
+
 
 ### Q&A 
 

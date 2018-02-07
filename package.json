@@ -8,6 +8,7 @@
     "server": "webpack-dev-server --content-base dist/",
     "local": "set NODE_ENV=dev-local8899 & webpack-dev-server --progress --colors --port 8889",
     "dev": "set NODE_ENV=dev-localdir & webpack-dev-server --progress --colors  --content-base ./dist/ --port 8889",
+    "pre": "set NODE_ENV=pre & webpack -p",
     "release": "set NODE_ENV=release & webpack -p",
     "build": "webpack -p"
   },

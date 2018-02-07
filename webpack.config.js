@@ -55,7 +55,7 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, '/dist'),
-    publicPath: process.env.NODE_ENV.trim() === 'release' ? '/dist/' : 'http://localhost:8889/dist/',
+    publicPath: (process.env.NODE_ENV.trim() === 'release' || process.env.NODE_ENV.trim() === 'pre') ? '/dist/' : 'http://localhost:8889/dist/',
     filename: '[name].bundle.js' // '[name].js?[hash]'
   },
   module: {
