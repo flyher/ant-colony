@@ -7,6 +7,7 @@ import Jsonhtml from '../page/jsonhtml';
 import Jwt from '../page/jwt';
 import Qr from '../page/qr';
 import Wb from '../page/wb';
+import HtmlMD from '../page/htmlmd';
 
 Vue.use(VueRouter);
 Vue.config.debug = false;
@@ -39,6 +40,9 @@ export default new VueRouter({
     }, {
       path: '/wb',
       component: Wb
+    }, {
+      path: '/htmlmd',
+      component: HtmlMD
     }
   ]
 });

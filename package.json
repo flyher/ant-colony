@@ -1,6 +1,6 @@
 {
   "name": "ant-colony",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "tools",
   "main": "",
   "scripts": {
@@ -56,6 +56,7 @@
     "bootstrap": "^3.3.7",
     "qrcodejs2": "^0.0.2",
     "js-base64": "^2.4.0",
-    "image-webpack-loader": "^4.0.0"
+    "image-webpack-loader": "^4.0.0",
+    "turndown": "^4.0.1"
   }
 }

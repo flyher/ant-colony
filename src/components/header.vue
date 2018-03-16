@@ -72,6 +72,9 @@
                 <li class="page-jsonhtml">
                   <a href="#/jsonhtml">json format</a>
                 </li>
+                <li class="page-htmlmd">
+                  <a href="#/htmlmd">html to markdown</a>
+                </li>
               </ul>
             </li>
           </ul>
@@ -102,7 +105,7 @@ export default {
         .find('li')
         .removeClass('active');
       $('.page-' + pagename).addClass('active');
-      
+
       $('.dropdown-menu').find('li').bind('click', function () {
         // 展开时点击会触发折叠
         if ($('#navbar')[0].getAttribute('aria-expanded') === 'true') {
