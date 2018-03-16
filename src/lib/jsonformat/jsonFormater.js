@@ -37,7 +37,7 @@ JsonFormater.prototype = {
       }
       html = this.ProcessObject(obj[0], 0, false, false, false);
       this.isFormated = true;
-      return '<pre class="row">' + html + '</pre>';
+      return '<pre class="row" style="margin:0 0 0 0">' + html + '</pre>';
     } catch (e) {
       return '';
       this.isFormated = false;

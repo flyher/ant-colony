@@ -29,7 +29,7 @@ export default {
       info: 'format json data',
       msg: 'jsonhtml page',
       jsonstr: '',
-      jsonhml: '<pre class="row"></pre>'
+      jsonhml: '<pre class="row" style="margin:0 0 0 0"></pre>'
     };
   },
   mounted: function () {
@@ -88,6 +88,11 @@ export default {
           .row {
             padding: 5px;
           }
+        }
+      }
+      #htmlcode{
+        .row{
+          margin: 0 0 0 0 !important;
         }
       }
     }
