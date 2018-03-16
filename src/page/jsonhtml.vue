@@ -12,8 +12,6 @@
               parse
             </button>
           </div>
-        </div>
-        <div class="">
           <div id='htmlcode' v-html="jsonhml">
           </div>
         </div>
