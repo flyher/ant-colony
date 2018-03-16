@@ -2,7 +2,7 @@
   <div id="jwt">
     <div class="content">
       <div class="input-str">
-        <div class="col-lg-6">
+        <div class="">
           <div class="alert alert-info" role="alert" v-html="info"></div>
           <div class="input-group">
             <input type="text" placeholder="jwt string" class="form-control" v-model="jwtString">

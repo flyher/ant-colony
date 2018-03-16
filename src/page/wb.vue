@@ -2,7 +2,7 @@
   <div id="wb">
     <div class="content">
       <div class="input-url">
-        <div class="col-lg-6">
+        <div class="">
           <div class="alert alert-info" role="alert" v-html="info"></div>
           <div class="input-group">
             <input type="text" placeholder="http://wx1.sinaimg.cn/mw690/006r2HqOgy1fj7dxg3zuxj30p02a1wry.jpg" class="form-control" v-model="url">

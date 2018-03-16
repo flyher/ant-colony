@@ -2,7 +2,7 @@
   <div id='jsonhtml'>
     <div class='content'>
       <div class='input-area'>
-        <div class='col-lg-6'>
+        <div class=''>
           <div class="alert alert-info" role="alert" v-html="info"></div>
           <div class='text-area'>
             <textarea type='text' placeholder='json data' class='form-control' v-model='jsonstr' />
@@ -13,7 +13,7 @@
             </button>
           </div>
         </div>
-        <div class="col-lg-6">
+        <div class="">
           <div id='htmlcode' v-html="jsonhml">
           </div>
         </div>
