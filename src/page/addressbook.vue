@@ -10,18 +10,13 @@
                   <th rowspan="2">
                     <input type="checkbox" :checked="itemSelectedAll" v-on:click="choiceAllRow()">
                   </th>
-                  <th rowspan="2" v-on:click="sortCol('id')">ID</th>
-                  <th rowspan="2" v-on:click="sortCol('name')">Name</th>
-                  <th rowspan="2" v-on:click="sortCol('location')">Location</th>
-                  <th rowspan="2" v-on:click="sortCol('office')">Office</th>
+                  <th class="header-sort" rowspan="2" v-on:click="sortCol('id')">ID</th>
+                  <th class="header-sort" rowspan="2" v-on:click="sortCol('name')">Name</th>
+                  <th class="header-sort" rowspan="2" v-on:click="sortCol('location')">Location</th>
+                  <th class="header-sort" rowspan="2" v-on:click="sortCol('office')">Office</th>
                   <th colspan="2" class="center">Phone</th>
                 </tr>
                 <tr>
-                  <th></th>
-                  <th></th>
-                  <th></th>
-                  <th></th>
-                  <th></th>
                   <th>Office</th>
                   <th>Cell</th>
                 </tr>
@@ -157,7 +152,7 @@ export default {
       itemSelectedAll: false,
       sortDic: {
         key: '',
-        asc: true
+        asc: false
       }
     };
   },
@@ -261,6 +256,10 @@ export default {
           }
           td {
             text-align: center;
+          }
+          .header-sort{
+            line-height: 50px;
+            cursor: pointer;
           }
         }
       }
