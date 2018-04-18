@@ -8,6 +8,7 @@ import Jwt from '../page/jwt';
 import Qr from '../page/qr';
 import Wb from '../page/wb';
 import HtmlMD from '../page/htmlmd';
+import AddressBook from '../page/addressbook';
 
 Vue.use(VueRouter);
 Vue.config.debug = false;
@@ -43,6 +44,9 @@ export default new VueRouter({
     }, {
       path: '/htmlmd',
       component: HtmlMD
+    }, {
+      path: '/addressbook',
+      component: AddressBook
     }
   ]
 });

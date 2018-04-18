@@ -40,6 +40,9 @@
                 <li class="page-wb">
                   <a href="#/wb">weibo</a>
                 </li>
+                <li class="page-addressbook">
+                  <a href="#/addressbook">address book</a>
+                </li>
                 <!-- <li><a href="#">Another action</a></li> -->
                 <!-- <li><a href="#">Something else here</a></li> -->
                 <!-- <li role="separator" class="divider"></li>
