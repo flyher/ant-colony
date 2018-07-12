@@ -1,10 +1,4 @@
 # ant-colony
-
-[![Build Status](https://travis-ci.org/flyher/ant-colony.svg?branch=dev_0.20)](https://travis-ci.org/flyher/ant-colony?branch=dev_0.20)
-[![Release Version](https://img.shields.io/github/release/flyher/ant-colony.svg)](https://github.com/flyher/ant-colony/releases)
-[![Issues](https://img.shields.io/github/issues/flyher/ant-colony.svg)](https://github.com/flyher/ant-colony/issues)
-[![Software License](https://img.shields.io/github/license/flyher/ant-colony.svg?branch=dev_0.20)](https://github.com/flyher/ant-colony/blob/dev_0.20/LICENSE)
-
 A single page web application, base on Vuejs, Webpack, ES6 and bootstrap.
 
 You can visit this website here:
@@ -16,20 +10,6 @@ You can visit this website here:
 [Simplified Chinese](README-CN.md)
 
 ### todo list
-
-- [x] create QR from url
-
-- [x] decode weibo url from the picture url  [here](https://www.v2ex.com/t/388152)
-
-- [x] redirect to your website without referrer
-
-- [x] decode [jwt](https://en.wikipedia.org/wiki/JSON_Web_Token)
-
-- [x] decode/encode base64
-
-- [x] json data format
-
-- [x] html to markdown
 
 ### install
 
@@ -72,6 +52,10 @@ the code  will release in `./dist/` with sourceMap
 npm run pre
 ```
 
+test
+```shell
+npm run test
+```
 
 
 ### Q&A 
@@ -86,7 +70,18 @@ npm run pre
 
 [Import image error: The system cannot find the path specified](https://github.com/tcoopman/image-webpack-loader/issues/68)
 
+
+### test
+
 [Vue Test Utils](https://vue-test-utils.vuejs.org/zh/)
+
+[resolve-extensions](https://webpack.js.org/configuration/resolve/#resolve-extensions)
+
+[karma.conf.js](https://github.com/vuejs-templates/webpack/blob/master/template/test/unit/karma.conf.js)
+
+[module not found: Error: Cannot resolve 'file' or 'directory'  #33](https://github.com/webpack-contrib/karma-webpack/issues/33)
+
+[istanbul-instrumenter-loader](https://github.com/webpack-contrib/istanbul-instrumenter-loader/blob/master/README.md)
 
 ### Tools
 

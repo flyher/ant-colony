@@ -236,7 +236,10 @@ module.exports = function (config) {
             NODE_ENV: '"production"'
           }
         })
-      ]
+      ],
+      resolve: {
+        extensions: ['.js', '.vue']
+      }
     }
   });
 };
