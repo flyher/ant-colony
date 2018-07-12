@@ -41,7 +41,7 @@ export default {
   },
   methods: {
     init: function () {
-      console.log('load r1 test page');
+      // console.log('load r1 test page');
     },
     saveToGlobalVuex: function () {
       store.commit('updateStore', this.txtOne + '|' + this.txtTwo);

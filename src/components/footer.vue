@@ -24,7 +24,7 @@ export default {
   },
   methods: {
     init: function () {
-      console.log('load footer');
+      // console.log('load footer');
     }
   }
 };

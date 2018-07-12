@@ -10,7 +10,8 @@
     "dev": "set NODE_ENV=dev-localdir & webpack-dev-server --progress --colors  --content-base ./dist/ --port 8889",
     "pre": "set NODE_ENV=pre & webpack -p",
     "release": "set NODE_ENV=release & webpack -p",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "test": "karma start"
   },
   "author": "flyher",
   "license": "GPL",
@@ -57,6 +58,25 @@
     "qrcodejs2": "^0.0.2",
     "js-base64": "^2.4.0",
     "image-webpack-loader": "^4.0.0",
-    "turndown": "^4.0.1"
+    "turndown": "^4.0.1",
+    "karma": "^2.0.4",
+    "karma-coverage": "^1.1.2",
+    "karma-jasmine": "^1.1.2",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-webpack": "^3.0.0",
+    "mocha": "^5.2.0",
+    "jasmine-core": "^3.1.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-junit-reporter": "^1.2.0",
+    "karma-coverage-istanbul-reporter": "^2.0.1",
+    "karma-mocha": "^1.3.0",
+    "karma-sinon-chai": "^2.0.2",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-spec-reporter": "^0.0.32",
+    "eslint-plugin-jasmine": "^2.10.1",
+    "karma-phantomjs-shim": "^1.5.0",
+    "sinon": "^6.1.3",
+    "chai": "^4.1.2",
+    "sinon-chai": "^3.2.0"
   }
 }

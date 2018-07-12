@@ -9,13 +9,15 @@ module.exports = {
     browser: true,
     commonjs: true,
     es6: true,
-    jquery: true //https://stackoverflow.com/questions/39510736/eslint-dollar-is-not-defined-no-undef/39511584
+    jquery: true, //https://stackoverflow.com/questions/39510736/eslint-dollar-is-not-defined-no-undef/39511584
+    jasmine: true
   },
   // https://github.com/feross/standard/blob/master/RULES.md#javascript-standard-style
-  extends: 'standard',
+  extends: ['standard', "eslint:recommended", "plugin:jasmine/recommended"],
   // required to lint *.vue files
   plugins: [
-    'html'
+    'html',
+    'jasmine'
   ],
   // add your custom rules here
   rules: {

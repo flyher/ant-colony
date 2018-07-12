@@ -22,7 +22,7 @@ export default {
   },
   methods: {
     init: function () {
-      console.log('load main page');
+      // console.log('load main page');
     }
   }
 };

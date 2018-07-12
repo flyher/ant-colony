@@ -86,6 +86,8 @@ npm run pre
 
 [Import image error: The system cannot find the path specified](https://github.com/tcoopman/image-webpack-loader/issues/68)
 
+[Vue Test Utils](https://vue-test-utils.vuejs.org/zh/)
+
 ### Tools
 
 Build By Visual Studio Code

@@ -29,8 +29,8 @@ export default {
   },
   methods: {
     init: function () {
-      console.log('load r1 test page');
-      console.log(store);
+      // console.log('load r1 test page');
+      // console.log(store);
       this.txtStore = store.state.txtStore;
     }
   }

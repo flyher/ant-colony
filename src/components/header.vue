@@ -38,9 +38,6 @@
               </a>
               <ul class="dropdown-menu">
                 <li class="page-wb">
-                  <a href="#/wb">weibo</a>
-                </li>
-                <li class="page-wb">
                   <a href="#/r1">r1</a>
                 </li>
                 <li class="page-wb">
@@ -61,25 +58,6 @@
               <ul class="dropdown-menu">
                 <li class="page-brige">
                   <a href="#/brige">brige</a>
-                </li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">String
-                <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu">
-                <li class="page-jwt">
-                  <a href="#/jwt">jwt</a>
-                </li>
-                <li class="page-base64">
-                  <a href="#/base64">base64</a>
-                </li>
-                <li class="page-jsonhtml">
-                  <a href="#/jsonhtml">json format</a>
-                </li>
-                <li class="page-htmlmd">
-                  <a href="#/htmlmd">html to markdown</a>
                 </li>
               </ul>
             </li>
@@ -104,7 +82,7 @@ export default {
   },
   methods: {
     init: function () {
-      console.log('load header');
+      // console.log('load header');
       let pathnames = window.location.pathname.split('/');
       let pagename = pathnames[pathnames.length - 1].replace(/g/, '');
       $('.header')

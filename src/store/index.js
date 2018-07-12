@@ -9,8 +9,8 @@ export default new Vuex.Store({
   },
   mutations: {
     updateStore: function (state, content) {
-      console.log(state);
-      console.log(content);
+      // console.log(state);
+      // console.log(content);
       state.txtStore = content;
     }
   }
